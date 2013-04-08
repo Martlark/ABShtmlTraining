@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="countryInfo.js"></script>
+
+    </head>
+
+    <body>
+		<div id='tableDiv'>
+		</div>
+        <script>
+			var countries = getPopulation2010();
+			var tableDiv = document.getElementById( 'tableDiv' );
+			var s = '<table><tr><th>ISO Code</th><th>Country</th><th>Population</th></tr>';
+			
+			for( var t in countries ){
+				var c = countries[t];
+				
+				s += '<tr><td>' + t + '</td><td>' + c.name + '</td><td>' + c.population + '</td></tr>';
+			}
+			s+= '</table>';
+			
+			tableDiv.innerHTML = s;
+        </script>
+	</body>
+</html>
+	
